@@ -31,7 +31,7 @@ public class CrossbeamApplication {
         request1.connect();
 
         JsonParser jp = new JsonParser();
-        JsonElement root1 = jp.parse(new InputStreamReader((InputStream) request1.getContent())); //Convert the input stream to a json element
+        JsonElement root1 = jp.parse(new InputStreamReader((InputStream) request1.getContent()));
         JsonObject obj1 = root1.getAsJsonObject();
 
         JsonArray arr1 = obj1.get("companies").getAsJsonArray();
@@ -48,7 +48,7 @@ public class CrossbeamApplication {
         URLConnection request2 = url2.openConnection();
         request2.connect();
 
-        JsonElement root2 = jp.parse(new InputStreamReader((InputStream) request2.getContent())); //Convert the input stream to a json element
+        JsonElement root2 = jp.parse(new InputStreamReader((InputStream) request2.getContent()));
         JsonObject obj2 = root2.getAsJsonObject();
 
         JsonArray arr2 = obj2.get("companies").getAsJsonArray();
